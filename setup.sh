@@ -14,7 +14,7 @@ sleep 0.3
 echo ""
 printf "\033[1;33m"
 printf "   ┌──────────────────────────────────────────────────┐\n"
-printf "   │  ⚠️  Before we start:                             │\n"
+printf "   │  ⚠️  Heads up:                                   │\n"
 printf "   │                                                  │\n"
 printf "   │  • You'll be asked for your Mac password         │\n"
 printf "   │    (it won't show characters — that's normal!)   │\n"
@@ -104,13 +104,9 @@ if [ -d "/Applications/Claude.app" ]; then
   printf "\033[1;32m"
   printf "   ╔═══════════════════════════════════════╗\n"
   sleep 0.08
-  printf "   ║                                       ║\n"
-  sleep 0.08
   printf "   ║   ✅ All done! Glyphic MCP is ready.  ║\n"
   sleep 0.08
-  printf "   ║   You can close this terminal window.  ║\n"
-  sleep 0.08
-  printf "   ║                                       ║\n"
+  printf "   ║   You can close this terminal window. ║\n"
   sleep 0.08
   printf "   ╚═══════════════════════════════════════╝\n"
   printf "\033[0m"
@@ -158,15 +154,11 @@ else
   printf "\033[1;32m"
   printf "   ╔════════════════════════════════════════════════════╗\n"
   sleep 0.08
-  printf "   ║                                                    ║\n"
-  sleep 0.08
   printf "   ║   ✅ Config saved! Install Claude Desktop from     ║\n"
   sleep 0.08
   printf "   ║   the page that just opened, then you're all set.  ║\n"
   sleep 0.08
   printf "   ║   You can close this terminal window.              ║\n"
-  sleep 0.08
-  printf "   ║                                                    ║\n"
   sleep 0.08
   printf "   ╚════════════════════════════════════════════════════╝\n"
   printf "\033[0m"
