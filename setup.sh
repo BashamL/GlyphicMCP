@@ -14,7 +14,7 @@ sleep 0.3
 echo ""
 printf "\033[1;33m"
 printf "   ┌──────────────────────────────────────────────────┐\n"
-printf "   │  ⚠️  Heads up:                                    │\n"
+printf "   │  ⚠️  Heads up:                                   │\n"
 printf "   │                                                  │\n"
 printf "   │  • You'll be asked for your Mac password         │\n"
 printf "   │    (it won't show characters — that's normal!)   │\n"
