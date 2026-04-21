@@ -13,15 +13,15 @@ sleep 0.3
 
 echo ""
 printf "\033[1;33m"
-printf "   ┌─────────────────────────────────────────────────┐\n"
-printf "   │  ⚠️  Before we start:                            │\n"
+printf "   ┌──────────────────────────────────────────────────┐\n"
+printf "   │  ⚠️  Before we start:                             │\n"
 printf "   │                                                  │\n"
 printf "   │  • You'll be asked for your Mac password         │\n"
 printf "   │    (it won't show characters — that's normal!)   │\n"
 printf "   │  • You may need to press ENTER at some point     │\n"
 printf "   │  • Takes a couple of minutes — just let it run   │\n"
 printf "   │  • You'll see a big green ✅ when it's done      │\n"
-printf "   └─────────────────────────────────────────────────┘\n"
+printf "   └──────────────────────────────────────────────────┘\n"
 printf "\033[0m"
 echo ""
 sleep 1
