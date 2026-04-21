@@ -1,6 +1,16 @@
 #!/bin/bash
 set -e
+
 echo ""
+printf "\033[1;36m"
+printf "   ╔════════════════════════════════════╗\n"
+sleep 0.08
+printf "   ║ 🔮 Glyphic MCP Setup for Claude 🔮 ║\n"
+sleep 0.08
+printf "   ╚════════════════════════════════════╝\n"
+printf "\033[0m"
+sleep 0.3
+
 read -rp "Enter your Glyphic API key: " API_KEY
 if [ -z "$API_KEY" ]; then echo "No API key provided."; exit 1; fi
 echo ""
@@ -47,12 +57,54 @@ if others: print(f"Other MCP servers preserved: {', '.join(others)}")
 print("Config saved.")
 PYEOF
 echo ""
-if pgrep -x "Claude" > /dev/null; then
-  echo "Restarting Claude Desktop..."
-  pkill -x "Claude" && sleep 2 && open -a "Claude"
-  echo "Claude Desktop restarted."
+if [ -d "/Applications/Claude.app" ]; then
+  if pgrep -x "Claude" > /dev/null; then
+    echo "Restarting Claude Desktop..."
+    pkill -x "Claude" && sleep 2 && open -a "Claude"
+    echo "Claude Desktop restarted."
+  else
+    echo "Claude Desktop not running - start it manually to pick up the new config."
+  fi
+  echo ""
+  echo "Done! Glyphic AI MCP is ready to use."
 else
-  echo "Claude Desktop not running - start it manually."
+  echo ""
+  echo "⚠️  You haven't installed Claude Desktop yet!"
+  echo "   I'll open the download page in..."
+  echo ""
+  sleep 0.5
+  printf "   ████████╗██╗  ██╗██████╗ ███████╗███████╗\n"
+  printf "   ╚══██╔══╝██║  ██║██╔══██╗██╔════╝██╔════╝\n"
+  printf "      ██║   ████████║██████╔╝█████╗  █████╗  \n"
+  printf "      ██║   ██╔══██║██╔══██╗██╔══╝  ██╔══╝  \n"
+  printf "      ██║   ██║  ██║██║  ██║███████╗███████╗\n"
+  printf "      ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝\n"
+  sleep 1
+  printf "\033[6A"
+  printf "   ████████╗██╗    ██╗ ██████╗ \n"
+  printf "   ╚══██╔══╝██║    ██║██╔═══██╗\n"
+  printf "      ██║   ██║ █╗ ██║██║   ██║\n"
+  printf "      ██║   ██║███╗██║██║   ██║\n"
+  printf "      ██║   ╚███╔███╔╝╚██████╔╝\n"
+  printf "      ╚═╝    ╚══╝╚══╝  ╚═════╝ \n"
+  sleep 1
+  printf "\033[6A"
+  printf "    ██████╗ ███╗   ██╗███████╗\n"
+  printf "   ██╔═══██╗████╗  ██║██╔════╝\n"
+  printf "   ██║   ██║██╔██╗ ██║█████╗  \n"
+  printf "   ██║   ██║██║╚██╗██║██╔══╝  \n"
+  printf "   ╚██████╔╝██║ ╚████║███████╗\n"
+  printf "    ╚═════╝ ╚═╝  ╚═══╝╚══════╝\n"
+  sleep 1
+  printf "\033[6A"
+  printf "\033[1;32m    ██████╗  ██████╗ ██╗\033[0m\n"
+  printf "\033[1;32m   ██╔════╝ ██╔═══██╗██║\033[0m\n"
+  printf "\033[1;32m   ██║  ███╗██║   ██║██║\033[0m\n"
+  printf "\033[1;32m   ██║   ██║██║   ██║╚═╝\033[0m\n"
+  printf "\033[1;32m   ╚██████╔╝╚██████╔╝██╗\033[0m\n"
+  printf "\033[1;32m    ╚═════╝  ╚═════╝ ╚═╝\033[0m\n"
+  echo ""
+  sleep 0.5
+  open "https://claude.ai/download"
+  echo "   Download page opened. Once installed, open Claude Desktop — Glyphic is already configured and ready to go."
 fi
-echo ""
-echo "Done! Glyphic AI MCP is ready to use."
