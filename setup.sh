@@ -32,7 +32,7 @@ if [ -z "$API_KEY" ]; then
   exit 1
 fi
 echo ""
-printf "\033[1;35m   ⏳ Setting up Glyphic AI MCP for Claude Desktop...\033[0m\n"
+printf "\033[1;35m   ⏳ Setting up Glyphic AI MCP for Claude Desktop..\033[0m\n"
 echo ""
 
 # Homebrew
